@@ -229,8 +229,8 @@ def F_Stat_DFs(ret_list1,ret_list2):
     else:
         print('ERROR')
 
-DJI_GPSC_FStat=F_Stat(DJI_LogReturns,GSPC_LogReturns)
-DJI_GPSC_FStat_DFs=F_Stat_DFs(DJI_LogReturns,GSPC_LogReturns)
+DJI_GPSC_FStat=F_Stat(DJIlogret,GSPClogret)
+DJI_GPSC_FStat_DFs=F_Stat_DFs(DJIlogret,GSPClogret)
 
 Fstats_R = stats.f.isf(0.15/2, DJI_GPSC_FStat_DFs[0], DJI_GPSC_FStat_DFs[1])
 Fstats_L = stats.f.isf(1-0.15/2, DJI_GPSC_FStat_DFs[0], DJI_GPSC_FStat_DFs[1])
